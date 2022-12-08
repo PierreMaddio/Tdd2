@@ -9,13 +9,17 @@ import XCTest
 @testable import tdd2
 
 class User {
-    
+    func getWelcomeMessage(name: String, age: Int) -> String {
+        return ""
+    }
 }
 
 final class tdd2Tests: XCTestCase {
 
-    func test() {
+    func test_funcGetWelcomeMessageReturnString() {
         let sut = User()
+        let message = sut.getWelcomeMessage(name: "joe", age: 30)
+        XCTAssertEqual(message, "")
     }
 
 }
