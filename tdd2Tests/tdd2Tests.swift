@@ -8,12 +8,6 @@
 import XCTest
 @testable import tdd2
 
-class User {
-    func getWelcomeMessage(name: String, age: Int) -> String? {
-        age > 18 ? "Welcome \(name)" : nil
-    }
-}
-
 final class tdd2Tests: XCTestCase {
     
     func test_funcGetWelcomeMessageReturnNil() {
