@@ -10,11 +10,7 @@ import XCTest
 
 class User {
     func getWelcomeMessage(name: String, age: Int) -> String? {
-        if age > 18 {
-            return "Welcome \(name)"
-        } else {
-            return nil
-        }
+        age > 18 ? "Welcome \(name)" : nil
     }
 }
 
