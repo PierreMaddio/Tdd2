@@ -25,5 +25,11 @@ final class tdd2Tests: XCTestCase {
         let message = sut.getWelcomeMessage(name: "bill", age: 17)
         XCTAssertEqual(message, nil)
     }
+    
+    func test_funcGetWelcomeMessageReturnWelcome() {
+        let sut = User()
+        let message = sut.getWelcomeMessage(name: "paul", age: 20)
+        XCTAssertEqual(message, "Welcome paul")
+    }
 
 }
