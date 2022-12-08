@@ -9,17 +9,21 @@ import XCTest
 @testable import tdd2
 
 class User {
-    func getWelcomeMessage(name: String, age: Int) -> String {
-        return ""
+    func getWelcomeMessage(name: String, age: Int) -> String? {
+        if age > 18 {
+            return "Welcome \(name)"
+        } else {
+            return nil
+        }
     }
 }
 
 final class tdd2Tests: XCTestCase {
-
-    func test_funcGetWelcomeMessageReturnString() {
+    
+    func test_funcGetWelcomeMessageReturnNil() {
         let sut = User()
-        let message = sut.getWelcomeMessage(name: "joe", age: 30)
-        XCTAssertEqual(message, "")
+        let message = sut.getWelcomeMessage(name: "bill", age: 17)
+        XCTAssertEqual(message, nil)
     }
 
 }
